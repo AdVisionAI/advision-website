@@ -8,39 +8,41 @@
 <meta property="og:title" content="AdVision AI — Academia de IA para Negocios">
 <meta property="og:description" content="Cursos prácticos de IA para crear negocios digitales rentables. Sin experiencia previa requerida.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0A0A0A">
+<meta name="theme-color" content="#0B0B1A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===== RESET & TOKENS ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg:       #0A0A0A;
-  --bg2:      #0F0F0F;
-  --surface:  #131313;
-  --surface2: #1A1A1A;
-  --surface3: #202020;
-  --border:   #1E1E1E;
-  --border2:  #2A2A2A;
-  --border3:  #383838;
-  --gold:     #C49A2A;
-  --gold2:    #E0B84A;
-  --gold3:    #F5D06A;
-  --gold-dim: rgba(196,154,42,0.12);
-  --text:     #F0EDE8;
-  --text2:    #A09890;
-  --text3:    #606060;
+  --bg:       #0B0B1A;
+  --bg2:      #0E0E22;
+  --surface:  #121226;
+  --surface2: #181830;
+  --surface3: #1E1E38;
+  --border:   #1E1E38;
+  --border2:  #26264A;
+  --border3:  #34345A;
+  --cyan:     #00D4FF;
+  --blue:     #5B6EF7;
+  --purple:   #C044EE;
+  --pink:     #FF3CAC;
+  --primary:  #5B6EF7;
+  --grad:     linear-gradient(135deg, #00D4FF 0%, #5B6EF7 40%, #C044EE 75%, #FF3CAC 100%);
+  --grad-dim: rgba(91,110,247,0.12);
+  --text:     #F0F0FF;
+  --text2:    #9090B8;
+  --text3:    #555570;
   --green:    #1DAF7E;
-  --blue:     #3D8AE8;
   --red:      #E05555;
-  --font-h:   'Syne', sans-serif;
-  --font-b:   'DM Sans', sans-serif;
+  --font-h:   'Nunito', sans-serif;
+  --font-b:   'Inter', sans-serif;
   --font-m:   'JetBrains Mono', monospace;
   --r:        12px;
   --r2:       20px;
-  --shadow:   0 8px 40px rgba(0,0,0,0.6);
-  --shadow2:  0 2px 16px rgba(0,0,0,0.4);
+  --shadow:   0 8px 40px rgba(0,0,0,0.7);
+  --shadow2:  0 2px 16px rgba(0,0,0,0.5);
 }
 html { scroll-behavior: smooth; }
 body {
@@ -71,9 +73,9 @@ img { max-width: 100%; }
   opacity: 0.18;
   animation: drift 20s ease-in-out infinite;
 }
-.orb1 { width: 600px; height: 600px; background: radial-gradient(circle, #C49A2A, transparent); top: -200px; left: -200px; animation-delay: 0s; }
-.orb2 { width: 500px; height: 500px; background: radial-gradient(circle, #3D8AE8, transparent); bottom: -150px; right: -150px; animation-delay: -7s; }
-.orb3 { width: 400px; height: 400px; background: radial-gradient(circle, #1DAF7E, transparent); top: 40%; left: 50%; transform: translate(-50%,-50%); animation-delay: -14s; opacity: 0.10; }
+.orb1 { width: 600px; height: 600px; background: radial-gradient(circle, #5B6EF7, transparent); top: -200px; left: -200px; animation-delay: 0s; }
+.orb2 { width: 500px; height: 500px; background: radial-gradient(circle, #C044EE, transparent); bottom: -150px; right: -150px; animation-delay: -7s; }
+.orb3 { width: 400px; height: 400px; background: radial-gradient(circle, #00D4FF, transparent); top: 40%; left: 50%; transform: translate(-50%,-50%); animation-delay: -14s; opacity: 0.12; }
 @keyframes drift {
   0%, 100% { transform: translate(0,0) scale(1); }
   33% { transform: translate(30px,-20px) scale(1.05); }
@@ -101,7 +103,7 @@ img { max-width: 100%; }
   transition: all 0.35s ease;
 }
 #navbar.scrolled {
-  background: rgba(10,10,10,0.88);
+  background: rgba(11,11,26,0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -113,22 +115,20 @@ img { max-width: 100%; }
 .nav-logo {
   display: flex; align-items: center; gap: 10px;
 }
-.nav-logo-mark {
-  width: 34px; height: 34px;
-  background: var(--gold-dim);
-  border: 1px solid rgba(196,154,42,0.35);
-  border-radius: 9px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px;
+.nav-logo-img {
+  height: 34px; width: auto;
+  border-radius: 6px;
 }
 .nav-logo-name {
   font-family: var(--font-h);
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.nav-logo-name span { color: var(--gold2); }
 .nav-links {
   display: flex; align-items: center; gap: 32px;
   list-style: none;
@@ -142,16 +142,16 @@ img { max-width: 100%; }
 }
 .nav-links a:hover { color: var(--text); }
 .nav-cta {
-  background: var(--gold-dim);
-  border: 1px solid rgba(196,154,42,0.4);
-  color: var(--gold2) !important;
+  background: var(--grad-dim);
+  border: 1px solid rgba(91,110,247,0.4);
+  color: var(--cyan) !important;
   padding: 8px 18px;
   border-radius: 8px;
   transition: all 0.2s !important;
 }
 .nav-cta:hover {
-  background: rgba(196,154,42,0.2) !important;
-  border-color: var(--gold) !important;
+  background: rgba(91,110,247,0.2) !important;
+  border-color: var(--blue) !important;
 }
 .hamburger {
   display: none;
@@ -161,7 +161,7 @@ img { max-width: 100%; }
 .mobile-menu {
   display: none;
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(10,10,10,0.98);
+  background: rgba(11,11,26,0.98);
   backdrop-filter: blur(20px);
   z-index: 999;
   flex-direction: column;
@@ -171,11 +171,11 @@ img { max-width: 100%; }
 .mobile-menu a {
   font-family: var(--font-h);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text2);
   transition: color 0.2s;
 }
-.mobile-menu a:hover { color: var(--gold2); }
+.mobile-menu a:hover { color: var(--cyan); }
 .mob-close {
   position: absolute; top: 24px; right: 28px;
   background: none; border: none; color: var(--text3);
@@ -201,9 +201,9 @@ img { max-width: 100%; }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
-  background: var(--gold-dim);
-  border: 1px solid rgba(196,154,42,0.25);
+  color: var(--cyan);
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 28px;
@@ -211,7 +211,7 @@ img { max-width: 100%; }
 .hero-eyebrow::before {
   content: '';
   width: 6px; height: 6px;
-  background: var(--gold2);
+  background: var(--cyan);
   border-radius: 50%;
   animation: pulse-dot 2s ease-in-out infinite;
 }
@@ -229,7 +229,7 @@ img { max-width: 100%; }
   letter-spacing: -0.02em;
 }
 .hero-title .grad {
-  background: linear-gradient(135deg, var(--gold2) 0%, var(--gold3) 50%, var(--gold2) 100%);
+  background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -244,8 +244,8 @@ img { max-width: 100%; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 9px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 100%);
-  color: #0A0A0A;
+  background: var(--grad);
+  color: #fff;
   font-family: var(--font-h);
   font-size: 14px;
   font-weight: 700;
@@ -255,9 +255,9 @@ img { max-width: 100%; }
   cursor: pointer;
   transition: all 0.25s;
   letter-spacing: 0.02em;
-  box-shadow: 0 4px 24px rgba(196,154,42,0.3);
+  box-shadow: 0 4px 24px rgba(91,110,247,0.35);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(196,154,42,0.4); filter: brightness(1.08); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(91,110,247,0.5); filter: brightness(1.08); }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 9px;
   background: transparent;
@@ -271,7 +271,7 @@ img { max-width: 100%; }
   cursor: pointer;
   transition: all 0.25s;
 }
-.btn-secondary:hover { border-color: var(--gold); color: var(--gold2); background: var(--gold-dim); }
+.btn-secondary:hover { border-color: var(--blue); color: var(--cyan); background: var(--grad-dim); }
 .hero-trust {
   display: flex; align-items: center; gap: 16px;
 }
@@ -288,10 +288,10 @@ img { max-width: 100%; }
   font-weight: 600;
   font-family: var(--font-h);
 }
-.av1 { background: linear-gradient(135deg,#3D8AE8,#1DAF7E); color:#fff; }
-.av2 { background: linear-gradient(135deg,#C49A2A,#E0B84A); color:#0A0A0A; }
-.av3 { background: linear-gradient(135deg,#E05555,#C49A2A); color:#fff; }
-.av4 { background: linear-gradient(135deg,#1DAF7E,#3D8AE8); color:#fff; }
+.av1 { background: linear-gradient(135deg,#00D4FF,#5B6EF7); color:#fff; }
+.av2 { background: linear-gradient(135deg,#5B6EF7,#C044EE); color:#fff; }
+.av3 { background: linear-gradient(135deg,#C044EE,#FF3CAC); color:#fff; }
+.av4 { background: linear-gradient(135deg,#FF3CAC,#00D4FF); color:#fff; }
 .trust-more {
   background: var(--surface2); color: var(--text3);
   width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--bg);
@@ -318,7 +318,7 @@ img { max-width: 100%; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(196,154,42,0.05) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(91,110,247,0.06) 0%, rgba(192,68,238,0.04) 60%, transparent 100%);
   pointer-events: none;
 }
 .dc-header {
@@ -340,8 +340,8 @@ img { max-width: 100%; }
 .pr-row { display: flex; align-items: center; gap: 12px; }
 .pr-label { font-size: 12px; color: var(--text2); min-width: 80px; }
 .pr-bar { flex: 1; height: 6px; background: var(--surface3); border-radius: 3px; overflow: hidden; }
-.pr-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold), var(--gold3)); transition: width 1.5s ease; }
-.pr-pct { font-size: 11px; color: var(--gold2); min-width: 30px; text-align: right; font-family: var(--font-m); }
+.pr-fill { height: 100%; border-radius: 3px; background: var(--grad); transition: width 1.5s ease; }
+.pr-pct { font-size: 11px; color: var(--cyan); min-width: 30px; text-align: right; font-family: var(--font-m); }
 .dc-divider { height: 1px; background: var(--border); margin: 18px 0; }
 .stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .stat-mini {
@@ -349,7 +349,7 @@ img { max-width: 100%; }
   border: 1px solid var(--border); border-radius: 10px;
   padding: 14px; text-align: center;
 }
-.sm-val { font-family: var(--font-h); font-size: 20px; font-weight: 800; color: var(--gold2); }
+.sm-val { font-family: var(--font-h); font-size: 20px; font-weight: 800; background: var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .sm-lbl { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
 .floating-tag {
   position: absolute;
@@ -390,12 +390,14 @@ img { max-width: 100%; }
 .stat-item:last-child { border-right: none; }
 .stat-num {
   font-family: var(--font-h);
-  font-size: 36px; font-weight: 800;
-  color: var(--gold2);
+  font-size: 36px; font-weight: 900;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
   margin-bottom: 6px;
 }
-.stat-num span { color: var(--gold3); }
 .stat-desc { font-size: 13px; color: var(--text3); }
 
 /* ===== ABOUT ===== */
@@ -411,12 +413,12 @@ img { max-width: 100%; }
   font-family: var(--font-m);
   font-size: 10px; font-weight: 500;
   letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gold);
+  color: var(--cyan);
   margin-bottom: 18px;
 }
 .section-label::before {
   content: ''; display: block;
-  width: 20px; height: 1px; background: var(--gold);
+  width: 20px; height: 1px; background: var(--grad);
 }
 .section-heading {
   font-family: var(--font-h);
@@ -425,7 +427,7 @@ img { max-width: 100%; }
   color: var(--text); margin-bottom: 18px;
   letter-spacing: -0.02em;
 }
-.section-heading em { font-style: normal; color: var(--gold2); }
+.section-heading em { font-style: normal; background: var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .about-body { font-size: 15.5px; color: var(--text2); line-height: 1.85; }
 .about-body p { margin-bottom: 16px; }
 .about-body strong { color: var(--text); font-weight: 500; }
@@ -436,7 +438,7 @@ img { max-width: 100%; }
   color: var(--text2); padding: 5px 14px; border-radius: 100px;
   transition: all 0.2s;
 }
-.pill:hover { border-color: var(--gold); color: var(--gold2); background: var(--gold-dim); }
+.pill:hover { border-color: var(--blue); color: var(--cyan); background: var(--grad-dim); }
 .about-visual { position: relative; }
 .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .mission-card {
@@ -449,8 +451,8 @@ img { max-width: 100%; }
 }
 .mission-card:hover { border-color: var(--border3); transform: translateY(-3px); box-shadow: var(--shadow2); }
 .mission-card.accent {
-  background: var(--gold-dim);
-  border-color: rgba(196,154,42,0.25);
+  background: var(--grad-dim);
+  border-color: rgba(91,110,247,0.25);
   grid-column: span 2;
 }
 .mc-icon { font-size: 26px; margin-bottom: 12px; }
@@ -478,15 +480,15 @@ img { max-width: 100%; }
   display: flex; flex-direction: column;
 }
 .course-card:hover {
-  border-color: var(--gold);
+  border-color: var(--blue);
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(196,154,42,0.12);
+  box-shadow: 0 20px 60px rgba(91,110,247,0.15);
 }
 .course-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold3));
+  background: var(--grad);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -518,8 +520,8 @@ img { max-width: 100%; }
   letter-spacing: 0.12em; text-transform: uppercase;
   margin-bottom: 12px; font-weight: 500;
 }
-.cat-gold { color: var(--gold2); }
-.cat-blue { color: var(--blue); }
+.cat-gold { color: var(--cyan); }
+.cat-blue { color: var(--purple); }
 .cc-name {
   font-family: var(--font-h); font-size: 21px; font-weight: 800;
   color: var(--text); line-height: 1.2; margin-bottom: 12px;
@@ -547,24 +549,24 @@ img { max-width: 100%; }
   font-family: var(--font-h); font-size: 28px; font-weight: 800;
   color: var(--text); line-height: 1;
 }
-.cc-price sup { font-size: 16px; vertical-align: super; color: var(--gold2); }
+.cc-price sup { font-size: 16px; vertical-align: super; color: var(--cyan); }
 .cc-price-period { font-size: 12px; color: var(--text3); font-weight: 400; }
 .cc-cta {
-  background: linear-gradient(135deg, var(--gold), var(--gold2));
-  color: #0A0A0A;
+  background: var(--grad);
+  color: #fff;
   font-family: var(--font-h); font-size: 13px; font-weight: 700;
   padding: 11px 22px; border-radius: 9px; border: none;
   cursor: pointer; transition: all 0.25s;
   white-space: nowrap; letter-spacing: 0.02em;
-  box-shadow: 0 4px 18px rgba(196,154,42,0.25);
+  box-shadow: 0 4px 18px rgba(91,110,247,0.3);
 }
-.cc-cta:hover { filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(196,154,42,0.35); }
+.cc-cta:hover { filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(91,110,247,0.45); }
 .cc-module-count {
   display: flex; align-items: center; gap: 6px;
   font-size: 12px; color: var(--text3);
   margin-bottom: 18px;
 }
-.cc-module-count::before { content: '◈'; color: var(--gold); font-size: 10px; }
+.cc-module-count::before { content: '◈'; color: var(--blue); font-size: 10px; }
 
 /* ===== METHOD ===== */
 #method { background: var(--bg2); }
@@ -609,20 +611,20 @@ img { max-width: 100%; }
 .cta-box::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center top, rgba(196,154,42,0.07) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center top, rgba(91,110,247,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 .cta-box-eyebrow {
   font-family: var(--font-m); font-size: 10px;
   letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 18px;
+  color: var(--cyan); margin-bottom: 18px;
 }
 .cta-box-heading {
   font-family: var(--font-h); font-size: clamp(28px,4vw,46px);
-  font-weight: 800; color: var(--text); line-height: 1.15;
-  margin-bottom: 16px; letter-spacing: -0.02em;
+  font-weight: 900; color: var(--text); line-height: 1.15;
+  margin-bottom: 16px; letter-spacing: -0.01em;
 }
-.cta-box-heading em { font-style: normal; color: var(--gold2); }
+.cta-box-heading em { font-style: normal; background: var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .cta-box-desc { font-size: 16px; color: var(--text2); max-width: 520px; margin: 0 auto 36px; line-height: 1.8; }
 .cta-box-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
 .cta-note { font-size: 12px; color: var(--text3); margin-top: 16px; }
@@ -638,10 +640,10 @@ footer {
   margin-bottom: 48px;
 }
 .footer-brand h3 {
-  font-family: var(--font-h); font-size: 18px; font-weight: 700;
-  color: var(--text); margin-bottom: 12px;
+  font-family: var(--font-h); font-size: 18px; font-weight: 800;
+  background: var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  margin-bottom: 12px;
 }
-.footer-brand h3 span { color: var(--gold2); }
 .footer-brand p { font-size: 13.5px; color: var(--text3); line-height: 1.7; max-width: 280px; }
 .footer-col h4 {
   font-family: var(--font-h); font-size: 12px; font-weight: 700;
@@ -650,7 +652,7 @@ footer {
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-col ul li a { font-size: 13.5px; color: var(--text3); transition: color 0.2s; }
-.footer-col ul li a:hover { color: var(--gold2); }
+.footer-col ul li a:hover { color: var(--cyan); }
 .footer-bottom {
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
   padding-top: 28px;
@@ -658,8 +660,33 @@ footer {
   font-size: 12.5px; color: var(--text3);
 }
 .footer-bottom a { color: var(--text3); transition: color 0.2s; }
-.footer-bottom a:hover { color: var(--gold2); }
+.footer-bottom a:hover { color: var(--cyan); }
 .footer-legal { display: flex; gap: 20px; }
+
+/* ===== LEGAL MODALS ===== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(11,11,26,0.92); backdrop-filter: blur(12px);
+  display: none; align-items: center; justify-content: center; padding: 24px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: var(--r2); padding: 40px; max-width: 660px; width: 100%;
+  max-height: 80vh; overflow-y: auto; position: relative;
+}
+.modal-box h2 { font-family: var(--font-h); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 20px; }
+.modal-box h3 { font-family: var(--font-h); font-size: 14px; font-weight: 700; color: var(--cyan); margin: 18px 0 6px; }
+.modal-box p, .modal-box li { font-size: 13.5px; color: var(--text2); line-height: 1.75; margin-bottom: 10px; }
+.modal-box ul { padding-left: 20px; }
+.modal-close {
+  position: absolute; top: 18px; right: 20px;
+  background: var(--surface2); border: 1px solid var(--border2);
+  color: var(--text3); font-size: 18px; width: 32px; height: 32px;
+  border-radius: 8px; cursor: pointer; display:flex; align-items:center; justify-content:center;
+  transition: all 0.2s;
+}
+.modal-close:hover { color: var(--text); border-color: var(--border3); }
 
 /* ===== ANIMATIONS ===== */
 .fade-in {
@@ -718,8 +745,8 @@ footer {
   <div class="container">
     <nav class="nav-inner">
       <a href="#" class="nav-logo">
-        <div class="nav-logo-mark">⬡</div>
-        <div class="nav-logo-name">AdVision<span> AI</span></div>
+        <img src="advision-logo.png" alt="AdVision AI" class="nav-logo-img" onerror="this.style.display='none'">
+        <div class="nav-logo-name">AdVision AI</div>
       </a>
       <ul class="nav-links">
         <li><a href="#about">Nosotros</a></li>
@@ -770,7 +797,7 @@ footer {
             <div class="trust-av av4">JG</div>
             <div class="trust-more">+</div>
           </div>
-          <p class="trust-text"><strong>+1,200 alumnos</strong> en Latinoamérica</p>
+          <p class="trust-text"><strong>+50 alumnos</strong> en Latinoamérica</p>
         </div>
       </div>
       <!-- RIGHT -->
@@ -813,7 +840,7 @@ footer {
               <div class="sm-lbl">Estudiado hoy</div>
             </div>
             <div class="stat-mini">
-              <div class="sm-val">$97</div>
+              <div class="sm-val">$28.99</div>
               <div class="sm-lbl">Invertido</div>
             </div>
           </div>
@@ -943,41 +970,43 @@ footer {
           <div class="cc-footer">
             <div class="cc-price-block">
               <div class="cc-price-tag">Pago único</div>
-              <div class="cc-price"><sup>$</sup>97 <span class="cc-price-period">USD</span></div>
+              <div class="cc-price"><sup>$</sup>28.99 <span class="cc-price-period">USD</span></div>
             </div>
-            <button class="cc-cta" id="cta-course-apps" onclick="window.open('https://pay.hotmart.com', '_blank')">Inscribirme →</button>
+            <button class="cc-cta" id="cta-course-apps" onclick="window.open('https://advisionai-curso.vercel.app', '_blank')">Inscribirme →</button>
           </div>
         </div>
       </article>
 
       <!-- COURSE 2 -->
-      <article class="course-card fade-in fade-in-d2" id="course-automatizacion-ia">
+      <article class="course-card fade-in fade-in-d2" id="course-crecimiento-apps">
         <div class="cc-thumb">
-          <div class="cc-thumb-bg" style="background: linear-gradient(135deg, #001122 0%, #001833 40%, #0A0A0A 100%);"></div>
-          <div class="cc-thumb-bg" style="background: radial-gradient(ellipse at 70% 50%, rgba(61,138,232,0.2) 0%, transparent 60%);"></div>
-          <div class="cc-thumb-icon">⚙️</div>
-          <div class="cc-thumb-label" style="color:var(--blue);">Próximamente</div>
+          <div class="cc-thumb-bg" style="background: linear-gradient(135deg, #0A0020 0%, #120030 40%, #0B0B1A 100%);"></div>
+          <div class="cc-thumb-bg" style="background: radial-gradient(ellipse at 70% 50%, rgba(192,68,238,0.25) 0%, transparent 60%);"></div>
+          <div class="cc-thumb-icon">📈</div>
+          <div class="cc-thumb-label" style="color:#C044EE;">Próximamente</div>
         </div>
         <div class="cc-body">
-          <div class="cc-category cat-blue">Negocios · Automatización</div>
-          <h3 class="cc-name">Automatización de Negocios con IA</h3>
-          <div class="cc-module-count">4 clases · 16 módulos · Acceso de por vida</div>
+          <div class="cc-category cat-blue">Crecimiento · Monetización Avanzada</div>
+          <h3 class="cc-name">Escala tu App: De 0 a 10,000 Descargas con IA</h3>
+          <div class="cc-module-count">4 clases · 14 módulos · Acceso de por vida</div>
           <p class="cc-desc">
-            Automatiza tus procesos de marketing, ventas y operaciones usando las herramientas de IA más potentes. Crea flujos que trabajan mientras tú duermes, sin necesidad de programar.
+            El curso complementario perfecto. Una vez que tienes tu app publicada, aprende a hacerla crecer usando IA para ASO, anuncios, contenido viral y análisis de métricas.
           </p>
           <ul class="cc-features">
-            <li>Automatización de contenido y redes sociales</li>
-            <li>Chatbots y asistentes con IA para tu negocio</li>
-            <li>Pipelines de ventas automatizados</li>
-            <li>Integración con Make, Zapier y n8n</li>
-            <li>Casos de uso reales para tu industria</li>
+            <li>Optimización ASO con IA para Play Store</li>
+            <li>Creación de anuncios con IA (imágenes y video)</li>
+            <li>Google Ads para apps desde cero</li>
+            <li>Análisis de métricas y retención con IA</li>
+            <li>Estrategias de crecimiento orgánico viral</li>
           </ul>
           <div class="cc-footer">
             <div class="cc-price-block">
               <div class="cc-price-tag">Preventa</div>
-              <div class="cc-price"><sup>$</sup>127 <span class="cc-price-period">USD</span></div>
+              <div class="cc-price"><sup>$</sup>29.99 <span class="cc-price-period">USD</span></div>
             </div>
-            <button class="cc-cta" id="cta-course-auto" style="background:linear-gradient(135deg,#3D8AE8,#5BA4F5);box-shadow:0 4px 18px rgba(61,138,232,0.25);">
+            <button class="cc-cta" id="cta-course-growth"
+              style="background:linear-gradient(135deg,#C044EE,#FF3CAC);box-shadow:0 4px 18px rgba(192,68,238,0.3);"
+              onclick="window.open('https://wa.me/5537494034?text=Hola%21+Quiero+unirme+a+la+lista+de+espera+del+curso+%22Escala+tu+App+con+IA%22','_blank')">
               Lista de espera →
             </button>
           </div>
@@ -1060,7 +1089,7 @@ footer {
         <h4>Cursos</h4>
         <ul>
           <li><a href="#course-apps-ia">Apps Rentables con IA</a></li>
-          <li><a href="#course-automatizacion-ia">Automatización con IA</a></li>
+          <li><a href="#course-crecimiento-apps">Escala tu App con IA</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1068,28 +1097,87 @@ footer {
         <ul>
           <li><a href="#about">Sobre nosotros</a></li>
           <li><a href="#method">Metodología</a></li>
-          <li><a href="mailto:contacto@advisionai.com">Contacto</a></li>
+          <li><a href="https://wa.me/5537494034" target="_blank">Contacto (WhatsApp)</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#footer">Términos de uso</a></li>
-          <li><a href="#footer">Política de privacidad</a></li>
-          <li><a href="#footer">Política de reembolsos</a></li>
+          <li><a href="#" onclick="openModal('modal-terms');return false;">Términos de uso</a></li>
+          <li><a href="#" onclick="openModal('modal-privacy');return false;">Política de privacidad</a></li>
+          <li><a href="#" onclick="openModal('modal-refunds');return false;">Política de reembolsos</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 AdVision AI. Todos los derechos reservados.</span>
       <div class="footer-legal">
-        <a href="#footer">Términos</a>
-        <a href="#footer">Privacidad</a>
-        <a href="mailto:contacto@advisionai.com">contacto@advisionai.com</a>
+        <a href="#" onclick="openModal('modal-terms');return false;">Términos</a>
+        <a href="#" onclick="openModal('modal-privacy');return false;">Privacidad</a>
+        <a href="https://wa.me/5537494034" target="_blank">WhatsApp</a>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- ===== MODALS LEGALES ===== -->
+<div class="modal-overlay" id="modal-terms" onclick="closeModalOutside(event,'modal-terms')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-terms')">✕</button>
+    <h2>Términos de Uso</h2>
+    <p>Última actualización: abril 2026. Al acceder y utilizar los servicios de <strong>AdVision AI</strong>, aceptas los siguientes términos.</p>
+    <h3>1. Uso del servicio</h3>
+    <p>Los cursos adquiridos en AdVision AI son para uso personal y no transferible. Queda prohibida la distribución, reproducción o reventa del contenido.</p>
+    <h3>2. Propiedad intelectual</h3>
+    <p>Todo el contenido (videos, materiales, código de ejemplo) es propiedad de AdVision AI. No puedes compartir credenciales de acceso ni distribuir el material del curso.</p>
+    <h3>3. Acceso</h3>
+    <p>Una vez adquirido el curso, el acceso es de por vida. AdVision AI se reserva el derecho de actualizar el contenido sin previo aviso.</p>
+    <h3>4. Limitación de responsabilidad</h3>
+    <p>AdVision AI no garantiza resultados económicos específicos. Los resultados dependen del esfuerzo y contexto individual de cada alumno.</p>
+    <h3>5. Contacto</h3>
+    <p>Para cualquier consulta sobre estos términos, contáctanos vía WhatsApp al +52 55 3749 4034.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-privacy" onclick="closeModalOutside(event,'modal-privacy')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-privacy')">✕</button>
+    <h2>Política de Privacidad</h2>
+    <p>En <strong>AdVision AI</strong> nos comprometemos a proteger tu información personal.</p>
+    <h3>Datos que recopilamos</h3>
+    <ul>
+      <li>Nombre y correo electrónico al registrarte</li>
+      <li>Información de pago procesada por Hotmart o Stripe (no almacenamos datos de tarjeta)</li>
+      <li>Progreso dentro de la plataforma educativa</li>
+    </ul>
+    <h3>Uso de la información</h3>
+    <p>Usamos tus datos para gestionar tu acceso al curso, enviarte comunicaciones relacionadas con el curso y mejorar nuestro servicio. No vendemos ni compartimos tus datos con terceros con fines publicitarios.</p>
+    <h3>Procesadores de pago</h3>
+    <p>Los pagos son procesados por Hotmart y/o Stripe. Sus políticas de privacidad aplican para el manejo de datos financieros.</p>
+    <h3>Cookies</h3>
+    <p>Usamos cookies esenciales para el funcionamiento de la plataforma. No usamos cookies de rastreo publicitario.</p>
+    <h3>Contacto</h3>
+    <p>Para ejercer tus derechos de acceso, rectificación o eliminación de datos, escríbenos por WhatsApp: +52 55 3749 4034.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-refunds" onclick="closeModalOutside(event,'modal-refunds')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-refunds')">✕</button>
+    <h2>Política de Reembolsos</h2>
+    <p><strong>AdVision AI</strong> ofrece una garantía de satisfacción de 7 días en todos sus cursos.</p>
+    <h3>Condiciones para reembolso</h3>
+    <ul>
+      <li>Solicitud dentro de los primeros 7 días naturales tras la compra</li>
+      <li>Haber completado menos del 30% del contenido del curso</li>
+      <li>Proporcionar razón de la solicitud (nos ayuda a mejorar)</li>
+    </ul>
+    <h3>Cómo solicitar un reembolso</h3>
+    <p>Contáctanos por WhatsApp al +52 55 3749 4034 con tu número de orden. Procesamos el reembolso en 5-10 días hábiles a través de la plataforma de pago original.</p>
+    <h3>Excepciones</h3>
+    <p>No aplica reembolso si el curso ha sido completado en más del 30%, si han pasado más de 7 días desde la compra, o si se detecta uso indebido del contenido.</p>
+  </div>
+</div>
 
 </div><!-- end .page-wrap -->
 
@@ -1139,10 +1227,10 @@ setTimeout(animateBars, 800);
 
 /* ===== ANIMATED COUNTERS ===== */
 var counters = [
-  { id: 'cnt-students', target: 1200, suffix: '' },
-  { id: 'cnt-courses',  target: 2,    suffix: '' },
-  { id: 'cnt-apps',     target: 350,  suffix: '' },
-  { id: 'cnt-countries',target: 12,   suffix: '' },
+  { id: 'cnt-students', target: 50,  suffix: '' },
+  { id: 'cnt-courses',  target: 2,   suffix: '' },
+  { id: 'cnt-apps',     target: 15,  suffix: '' },
+  { id: 'cnt-countries',target: 12,  suffix: '' },
 ];
 var countersStarted = false;
 var statsEl = document.getElementById('stats');
@@ -1166,6 +1254,27 @@ var statsObserver = new IntersectionObserver(function(entries) {
   }
 }, { threshold: 0.3 });
 statsObserver.observe(statsEl);
+
+/* ===== MODAL FUNCTIONS ===== */
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e, id) {
+  if (e.target === e.currentTarget) closeModal(id);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m){
+      m.classList.remove('open');
+    });
+    document.body.style.overflow = '';
+  }
+});
 </script>
 </body>
 </html>
